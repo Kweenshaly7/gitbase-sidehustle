@@ -5,10 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Excalet Integrated Services</title>
+        <style>
+            img {
+                width: 100px;
+                border-radius: 10px;
+            }
+            fieldset {
+                width:50%; background-color: #019934; border-radius: 5%;
+            }
+        </style>
     </head>
     <body>
         <header>
             <h1>EXCALET INTEGRATED SERVICES</h1>
+            <img src="EXCALET_LOGO2.jpg" alt="Company's logo">
             <nav>
                 <ul>
                     <li><a href="home.html" target="_blank">Home</a></li>
@@ -21,27 +31,31 @@
         <main>
             <div>
                 <h2>REGISTRATION FORM</h2>
-                <h3>Fields with (*) are required</h3>
                 <form method="*">
                     <fieldset>
                         <legend>Biodata</legend>
                             <label for="fullname">Fullname</label>
-                            <input type="text" name="fullname" id="fullname" required="*" placeholder="Lastname first">
+                            <input type="text" name="fullname" maxlength="40" id="fullname" required placeholder="Lastname first">
                         <br>
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email" required="*">
+                            <input type="email" name="email" id="email" required>
+                        <br>
+                            <label>Password
+                                <input type="password" required>
+                            </label>
                         <br>
                             <label for="dob">Date of Birth</label>
-                            <input type="date" name="dob" id="dob" required="*">
+                            <input type="date" name="dob" id="dob" required>
                         <br>
+                        <p>Gender</p>
                             <label for="Male">Male</label>
-                            <input type="radio" name="sex" id="male" value="male">
-                        <br>
+                            <input type="radio" name="gender" id="male" value="male">
+                            
                             <label for="Female">Female</label>
-                            <input type="radio" name="sex" id="female" value="female">
+                            <input type="radio" name="gender" id="female" value="female">
                         <br>
-                            <label for="state">State</label>
-                            <select id="state" aria-placeholder="State">
+                            <p>State of Origin</p>
+                            <select id="state">
                                 <option value="Abia">Abia</option>
                                 <option value="Adamawa">Adamawa</option>
                                 <option value="Akwa Ibom">Akwa Ibom</option>
@@ -65,6 +79,7 @@
                                 <option value="Kogi">Kogi</option>
                                 <option value="Kwara">Kwara</option>
                             </select>
+                            <br>
                         <input type="button" value="Submit">
                     </fieldset>
                 </form>
